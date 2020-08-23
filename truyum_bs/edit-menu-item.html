@@ -1,0 +1,74 @@
+<!Doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1" >
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="style/style.css">
+    <title>Edit Menu Item</title>
+</head>
+<body>
+	<div class="container">
+		<div class="container">
+			<div class="bg-info row">
+				<div class="col-sm-4"><img class="ml-5 pl-4" src="images\truyum-logo.png" height="100px" width="100px"></div>
+				<div class="col-sm-8"><h1 class="display-3 ml-5 text-white">tryYum</h1></div>
+			</div>
+		</div>
+		<main class="container">
+		<h3 class="text-center text-info"><br>Edit Menu Item</h3>
+        <div class="container pl-5 ml-5">
+			<form name="editForm"  onsubmit="return validation()" method="post">
+				<div class="form-group">
+                    <label for="pname">Name</label>
+                    <input type="text" class="form-control col-sm-10" id="title"><br>
+                </div>
+				<div class="form-row">
+					<div class="form-group col-sm-2">
+						<label for="price">Price (Rs.)</label>
+						<input type="text" class="form-control" id="price">
+					</div>
+					<div class="form-group col-sm-2 text-center">   
+						<label for="active">Active</label>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="active" id="active" checked>
+							<label class="form-check-label">Yes</label>&emsp;&emsp;
+							<input class="form-check-input" type="radio" name="active" id="active">
+							<label class="form-check-label">No</label>
+						</div>
+					</div>   
+					<div class="form-group col-sm-3">   
+						<label for="dateOfLaunch">Date of Launch</label>
+						<input type="date" class="form-control" id="dateOfLaunch">
+					</div>
+					<div class="form-group col-sm-3">    
+						<label for="category">Category</label>
+						<select id="category" class="form-control">
+							<option selected>Choose</option>
+							<option value="Starters">Starters</option>
+							<option value="Main Course">Main Course</option>
+							<option value="Dessert">Dessert</option>
+							<option value="Drinks">Drinks</option>
+						</select>
+					</div>
+				</div><br>			 
+                <div class="form-group">
+					<div class="form-check">
+						<input  class="form-check-input" type="checkbox" id="freeDelivery">
+						<label class="form-check-label">Free Delivery</label>
+					</div>
+                </div><br>
+                <button class="btn btn-info btn-lg" type="submit" id="save">Save</button>
+            </form>
+		</div>
+    </main>
+    <footer class="footer container">
+        <h4>Copyright &copy; 2019</h4>
+    </footer>
+	<script src="js\script.js"></script>
+	</div>
+</body>
+</html>
